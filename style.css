@@ -1,0 +1,32 @@
+.header {grid-area: header;}
+.small-box-1 {grid-area: small-box-1;}
+.small-box-2 {grid-area: small-box-2;}
+.small-box-3 {grid-area: small-box-3;}
+.sidebar {grid-area: sidebar}
+.main {grid-area: main;}
+.footer {grid-area: footer;}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: 200px 400px 800px 200px;
+    grid-template-areas: 
+        "header header header header"
+        "small-box-1 small-box-2 small-box-3 sidebar"
+        "main main main sidebar"
+        "footer footer footer footer"
+        ;
+    grid-gap: 20px;
+    padding: 20px;
+    color: white;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.container > * {
+    background-color: #4169E1;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+}
